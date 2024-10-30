@@ -1,15 +1,33 @@
 
+
+/* Index Page */
+
 #indexBody {
+    position: fixed; 
+    top: 0; 
+    bottom: 0;
+    right: 0;
+    left: 0;
     margin: 0;
     max-height: 100%;
     overflow: hidden;
 }
 
-header {
+#indexHeader {
+    margin: 0;
+    height: 45px;
     z-index: 1000;
+    overflow: hidden;
 }
 
-/* Index Page */
+#headerTitle {
+    top: 10px;
+    padding: 10px;
+    height: 0;
+    font-size: 35px;
+    font-weight: 1000;
+}
+
 .mainContainer {
     position: relative;
     display: flex;
@@ -33,13 +51,14 @@ header {
     height: 90vh;
 }
 
+
 /* Contents Page */
 #contentBody {
     overflow: auto
 }
 
 #sideBarBtn {
-    padding: 0px 5px 5px 0px;
+    padding: 0px 0px 5px 0px;
     margin-left: auto; 
     margin-right: 0;
 }
@@ -52,13 +71,13 @@ header {
 .headerContainer {
     display: flex; 
     justify-content: flex-end;
-    padding: 20px 0px 0px 10px;
-    font-size: 25px;
+    padding: 5px 0px 5px 5px;
+    font-size: 30px;
     font-weight: 900;
 }
 
 #myContent {
-    padding: 5px 10px;
+    padding: 0px 5px;
 }
 
 
