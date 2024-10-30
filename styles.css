@@ -11,12 +11,13 @@
     margin: 0;
     max-height: 100vh;
     overflow: hidden;
+    border: solid 2px;
 }
 
 #indexHeader {
     margin: 0;
     height: 5%;
-    min-height: 30px;
+    min-height: 35px;
     z-index: 1000;
     overflow: hidden;
 }
