@@ -22,7 +22,7 @@ header {
     align-items: right;
     justify-content: left;
     min-width: 200px;
-    width: 15%;
+    width: 200px;
     height: 95vh;
     overflow-y: auto; 
     overflow-x: hidden;
@@ -39,7 +39,7 @@ header {
 
 /* Contents Page */
 #sideBarBtn {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 20px;
     margin-left: auto; 
     margin-right: 0;
 }
@@ -49,10 +49,10 @@ header {
     cursor: pointer;
 }
 
-#contentHeader {
+.headerContainer {
     display: flex; 
     justify-content: flex-end;
-    padding: 20px 10px 0px 10px;
+    padding: 20px 0px 0px 10px;
     font-size: 25px;
     font-weight: 900;
 }
