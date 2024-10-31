@@ -4,7 +4,8 @@
 
 body {
     margin: 0;
-    overflow: auto;
+    /* overflow: auto; */
+    width: 110%;
     /* text-wrap: nowrap; */
 }
 
@@ -16,10 +17,26 @@ header {
 }
 
 .postParagraph {
-    padding: 5px 10px 10px 20px;
+    padding: 5px 10px 10px 15px;
+    max-width: 90vw;
 }
 
 #publishDate {
     font-size: 12px;
     padding: 15px 20px 0px 15px;
 }
+
+/* USE WHEN ADDING IMAGES */
+/* 
+.imgContainer {
+    overflow: auto;
+    width: 90vw;
+    height: 90vh;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.imgContainer > img {
+    height: 500px; 
+    width: 800px; 
+} */
