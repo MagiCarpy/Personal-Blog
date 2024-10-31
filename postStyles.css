@@ -19,7 +19,6 @@ header {
 
 .postParagraph {
     padding: 5px 10px 10px 15px;
-    max-width: 90vw;
 }
 
 #publishDate {
@@ -28,7 +27,7 @@ header {
 }
 
 /* USE WHEN ADDING IMAGES */
-
+/* 
 .imgContainer {
     overflow: auto;
     width: 90vw;
@@ -40,4 +39,4 @@ header {
 .imgContainer > img {
     height: 500px; 
     width: 800px; 
-}
+} */
