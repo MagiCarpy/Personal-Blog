@@ -33,3 +33,7 @@ function showContent(boolean, scrn) {
         
     }
 }
+
+function goToHome() {
+    document.getElementById('postScreen').src = "home.html";
+  }
