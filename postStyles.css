@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    margin-right: 0;
+    margin-left: 15px;
     width: 100%;
     min-width: 500px;
     /* overflow: auto; */
@@ -15,7 +15,7 @@ header {
     padding: 0px 10px 0px 10px;
     font-weight: 900;
     font-size: 40px;
-    z-index: 1000;
+    z-index: 500;
 }
 
 .postParagraph {
