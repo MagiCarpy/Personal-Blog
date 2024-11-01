@@ -67,8 +67,10 @@
 
 /* Contents Page */
 #contentBody {
+    height:fit-content;
     overflow: auto;
     margin:0;
+    margin-bottom: 50px;
 }
 
 #contentHeader {
@@ -94,8 +96,6 @@
     text-decoration: none;
     color: black;
 }
-/* TEST */
-/* TEST */
 
 #contentItem {
     text-decoration: none; /* Removes the underline */
@@ -107,12 +107,12 @@
 }
 
 #sideBarBtn:hover, #headerTitle:hover, 
-#contentItem:hover, #categoryItem:hover{
+#contentItem:hover, #categoryItem:hover, .category:hover{
     color: rgb(105, 105, 105);
     cursor: pointer;
 }
 
-#categoryItem {
+#category {
     text-decoration: none; /* Removes the underline */
     color: black;
     font-weight: 500;
@@ -121,3 +121,28 @@
 td, th {
     padding: 5px; 
 }
+
+/* Category Item */
+
+/* #directory {
+    margin-bottom: 200px;
+} */
+
+.category {
+    cursor: pointer;
+}
+
+.categoryContainer {
+    display: grid;
+    visibility: collapse;
+    height: 0;
+}
+
+#categoryItem {
+    padding-left: 15px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+

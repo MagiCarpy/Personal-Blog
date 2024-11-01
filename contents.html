@@ -10,7 +10,7 @@
   <body id="contentBody">
     <header class="headerContainer">
       <a id="contentHeader">Contents</a>
-      <a id="sideBarBtn" onclick="openCloseBar()"> &#171;</a>
+      <a id="sideBarBtn" onclick="openCloseBar()">&#171;</a>
     </header>
 
     <table id="myContent" style="align-content: left; overflow: hidden;">
@@ -31,18 +31,34 @@
         </tr>
         <tr>
           <td>
-            <a id="categoryItem" href="./posts/testPost1.html" target="main">🖿 Category</a>
-
+            <div class="category" onclick="closeCategory('category1')" href="./posts/testPost2.html" target="main">
+              &#128448; Category TEST1
+            </div>
+            <div id="category1" class="categoryContainer">
+                  <a id="categoryItem" href="./posts/testPost1.html" target="main"> Item 2</a>
+                  <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                  <a id="categoryItem" href="./posts/testPost1.html" target="main"> Item 2</a>
+                  <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+            </div>
           </td>
         </tr>
         <tr>
-
           <td>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <a id="categoryItem" href="./posts/testPost1.html" target="main">🖿 Category</a>
+
+            <div class="category" onclick="closeCategory('category2')" href="./posts/testPost2.html" target="main">
+              &#128448; Category TEST2
+            </div>
+            <div id="category2" class="categoryContainer">
+                  <a id="categoryItem" href="./posts/testPost1.html" target="main"> Item 2</a>
+                  <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                  <a id="categoryItem" href="./posts/testPost1.html" target="main"> Item 2</a>
+                  <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+            </div>
+
           </td>
         </tr>
+
+
     </table>
     <script src="scripts.js"></script>
   </body>

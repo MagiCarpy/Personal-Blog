@@ -9,12 +9,12 @@ function openCloseBar() {
         showContent(false, screen);
         btn.innerHTML = "&#8250;"
         btn.style.paddingRight = "0px";
-        document.getElementById('contentBody').style.overflowY = "hidden";
+        document.getElementById('contentBody').style.overflow = "hidden";
     } else {
         showContent(true, screen);
         btn.innerHTML = "&#171;";
         btn.style.paddingRight = "8px";
-        document.getElementById('contentBody').style.overflowY = "auto";
+        document.getElementById('contentBody').style.overflow = "auto";
     }
 }
 
@@ -34,6 +34,19 @@ function showContent(boolean, scrn) {
         scrn.style.width = "15px";
         myContent.style.pointerEvents = "none";
         
+    }
+}
+
+//document.getElementById("categoryContainer")
+function closeCategory(elementName) {
+    category = document.getElementById(elementName);
+    if (category.style.visibility != "visible") {
+        console.log("make visible");
+        category.style.visibility = "visible";
+        category.style.height = "auto";
+    } else {
+        category.style.visibility = "collapse";
+        category.style.height = "0px";
     }
 }
 
