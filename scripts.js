@@ -9,12 +9,12 @@ function openCloseBar() {
         showContent(false, screen);
         btn.innerHTML = "&#8250;"
         btn.style.paddingRight = "0px";
-        document.getElementById('contentBody').style.overflow = "hidden";
+        document.getElementById('contentBody').style.overflowY = "hidden";
     } else {
         showContent(true, screen);
         btn.innerHTML = "&#171;";
         btn.style.paddingRight = "8px";
-        document.getElementById('contentBody').style.overflow = "auto";
+        document.getElementById('contentBody').style.overflowY = "auto";
     }
 }
 
