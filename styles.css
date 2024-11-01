@@ -10,7 +10,7 @@
     right: 0;
     left: 0;
     margin: 0;
-    max-width: 120%;
+    max-width: 100vw;
     max-height: 100%;
     overflow: hidden;
     /* border: solid 2px; */
@@ -58,7 +58,7 @@
 #postScreen {
     position: relative;
     align-items: right;
-    width: 120%; 
+    width: 100vw; 
     height: 100%;
     outline:black solid 1px;
 }
