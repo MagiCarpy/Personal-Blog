@@ -4,13 +4,16 @@ function sleep(ms) {
 
 function openCloseBar() {
     let screen = parent.document.getElementById('contentScreen');
+    let btn = document.getElementById('sideBarBtn');
     if (screen.style.minWidth != "0px") {
         showContent(false, screen);
-        document.getElementById('sideBarBtn').innerHTML = "&#187;"
+        btn.innerHTML = "&#8250;"
+        btn.style.paddingRight = "0px";
         document.getElementById('contentBody').style.overflow = "hidden";
     } else {
         showContent(true, screen);
-        document.getElementById('sideBarBtn').innerHTML = "&#171;"
+        btn.innerHTML = "&#171;";
+        btn.style.paddingRight = "8px";
         document.getElementById('contentBody').style.overflow = "auto";
     }
 }
@@ -28,7 +31,7 @@ function showContent(boolean, scrn) {
         contentHeader.style.opacity = "0";
         myContent.style.opacity = "0";
         scrn.style.minWidth = "0px";
-        scrn.style.width = "35px";
+        scrn.style.width = "15px";
         myContent.style.pointerEvents = "none";
         
     }

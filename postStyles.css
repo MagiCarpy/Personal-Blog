@@ -5,8 +5,9 @@
 body {
     margin: 0;
     margin-right: 0;
-    /* overflow: auto; */
     width: 100%;
+    min-width: 500px;
+    /* overflow: auto; */
     /* text-wrap: nowrap; */
 }
 
