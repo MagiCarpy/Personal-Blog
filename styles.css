@@ -3,7 +3,6 @@
 }
 
 /* Index Page */
-
 #indexBody {
     position: fixed; 
     top: 0; 
@@ -59,14 +58,13 @@
 #postScreen {
     position: relative;
     align-items: right;
-    width: 100%; 
+    width: 120%; 
     height: 100%;
     outline:black solid 1px;
 }
 
 
 /* Contents Page */
-
 #contentBody {
     overflow: auto;
     margin:0;
