@@ -19,6 +19,7 @@ header {
 
 .postParagraph {
     padding: 5px 10px 10px 15px;
+    max-width: 1000px;
 }
 
 #publishDate {
