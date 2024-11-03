@@ -41,7 +41,6 @@ function showContent(boolean, scrn) {
 function closeCategory(elementName) {
     category = document.getElementById(elementName);
     if (category.style.visibility != "visible") {
-        console.log("make visible");
         category.style.visibility = "visible";
         category.style.height = "auto";
     } else {
