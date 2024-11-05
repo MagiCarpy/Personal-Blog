@@ -1,3 +1,7 @@
+const header = parent.document.getElementById('indexBody');
+const contents = parent.document.getElementById('contentScreen');
+const posts = parent.document.getElementById('postScreen');
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -37,7 +41,6 @@ function showContent(boolean, scrn) {
     }
 }
 
-//document.getElementById("categoryContainer")
 function closeCategory(elementName) {
     category = document.getElementById(elementName);
     if (category.style.visibility != "visible") {
@@ -52,3 +55,5 @@ function closeCategory(elementName) {
 function goToHome() {
     document.getElementById('postScreen').src = "home.html";
   }
+
+
