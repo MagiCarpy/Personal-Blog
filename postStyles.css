@@ -1,5 +1,5 @@
 * {
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -8,7 +8,11 @@ body {
     margin-right: 15px;
     min-width: 500px;
     overflow: scroll;
-    /* text-wrap: nowrap; */
+    color: rgb(68, 68, 68);
+    font-weight: 500;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(110, 110, 110);
+    
 }
 
 header {

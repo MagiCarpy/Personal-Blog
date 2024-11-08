@@ -1,6 +1,9 @@
-const header = parent.document.getElementById('indexBody');
-const contents = parent.document.getElementById('contentScreen');
-const posts = parent.document.getElementById('postScreen');
+const header = document.getElementById('indexBody');
+const contentBody = document.getElementById('contentScreen');
+const postBody = document.getElementById('postScreen');
+const textDarkTheme = 'rgb(163, 119, 37)'
+const backDarkTheme = 'rgb(20, 20, 20)';
+const backLightTheme = 'rgb(255, 255, 255)';
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -57,3 +60,16 @@ function goToHome() {
   }
 
 
+function toggleTheme() {
+    if (!header.style.backgroundColor || header.style.backgroundColor == 'rgb(255, 255, 255)') {
+        document.getElementById("indexHeader").style.outlineColor = 'grey';
+        header.style.backgroundColor = backDarkTheme;
+        postBody.style.backgroundColor = backDarkTheme;
+        contentBody.style.backgroundColor = backDarkTheme;
+    } else {
+        document.getElementById("indexHeader").style.outlineColor = 'black';
+        header.style.backgroundColor = backLightTheme;
+        postBody.style.backgroundColor = backLightTheme;
+        contentBody.style.backgroundColor = backLightTheme;
+    }
+}
