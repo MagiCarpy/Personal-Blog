@@ -62,12 +62,12 @@ function goToHome() {
 
 function toggleTheme() {
     if (!header.style.backgroundColor || header.style.backgroundColor == 'rgb(255, 255, 255)') {
-        document.getElementById("indexHeader").style.outlineColor = 'grey';
+        document.getElementById("indexHeader").style.outlineColor = 'rgb(45, 45, 45)';
         header.style.backgroundColor = backDarkTheme;
         postBody.style.backgroundColor = backDarkTheme;
         contentBody.style.backgroundColor = backDarkTheme;
     } else {
-        document.getElementById("indexHeader").style.outlineColor = 'black';
+        document.getElementById("indexHeader").style.outlineColor = 'rgb(0, 0, 0)';
         header.style.backgroundColor = backLightTheme;
         postBody.style.backgroundColor = backLightTheme;
         contentBody.style.backgroundColor = backLightTheme;
