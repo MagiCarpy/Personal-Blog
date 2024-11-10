@@ -7,15 +7,25 @@ const backLightTheme = 'rgb(255, 255, 255)';
 
 function toggleTheme() {
     if(!localStorage.getItem('dark')) {
+        header.style.color = textDarkTheme;
+        contentBody.style.color = textDarkTheme;
+        header.style.backgroundColor = backDarkTheme;
+        contentBody.style.backgroundColor = backDarkTheme;
+
         document.body.classList.add("dark_mode")
         localStorage.removeItem('light');
         localStorage.setItem('dark',this.checked)
     } else {
+        header.style.color = textLightTheme;
+        contentBody.style.color = textLightTheme;
+        header.style.backgroundColor = backLightTheme;
+        contentBody.style.backgroundColor = backLightTheme; 
+
         document.body.classList.remove('dark_mode') 
         localStorage.removeItem('dark');
         localStorage.setItem('light',this.checked);  
     }
-    window.location.reload();
+    document.getElementById('postScreen').contentWindow.location.reload();
 }
 
 if(localStorage.getItem('dark')) {
@@ -28,21 +38,21 @@ if(localStorage.getItem('dark')) {
     contentBody.style.color = textLightTheme;
     header.style.backgroundColor = backLightTheme;
     contentBody.style.backgroundColor = backLightTheme; 
-  }
+}
 
 function openCloseBar() {
     let screen = parent.document.getElementById('contentScreen');
     let btn = document.getElementById('sideBarBtn');
-    if (screen.style.minWidth != "0px") {
-        showContent(false, screen);
-        btn.innerHTML = "&#8250;"
-        btn.style.paddingRight = "0px";
-        screen.style.overflow = "hidden";
-    } else {
+    if (screen.style.minWidth == "0px" || !screen.style.minWidth) {
         showContent(true, screen);
         btn.innerHTML = "&#171;";
         btn.style.paddingRight = "8px";
         screen.style.overflow = "auto";
+    } else {
+        showContent(false, screen);
+        btn.innerHTML = "&#8250;"
+        btn.style.paddingRight = "0px";
+        screen.style.overflow = "hidden";
     }
 }
 

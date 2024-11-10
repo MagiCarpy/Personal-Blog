@@ -58,12 +58,13 @@
 }
 
 #contentScreen {
-
+    min-width: 0px;
+    width: 15px;
+    pointer-events: "none";
     overflow: auto;
     position: fixed;
     align-items: right;
     justify-content: left;
-    width: 200px;
     height: 100%;
     /* outline: rgb(45, 45, 45) solid 1px; */
     background-color: white;
@@ -82,7 +83,6 @@
 
 /* Contents Page */
 #contentBody {
-    
     height:fit-content;
     overflow: auto;
     margin:0;
@@ -90,12 +90,13 @@
 }
 
 #contentHeader {
+    opacity: 0;
     opacity: 1;
     padding: 0px 5px 0px 0px;
 }
 
 #sideBarBtn {
-    padding-right: 5px;
+    padding-right: 0px;
     margin-left: auto; 
     /* margin-right: 0; */
 }
@@ -109,6 +110,7 @@
 }
 
 #myContent {
+    opacity: 0;
     padding: 0px 5px 50px 10px;
     text-decoration: none;
     font-size: 16px;
