@@ -2,16 +2,15 @@
     font-family: "Roboto", sans-serif;
 }
 
-body {
+#postBody {
     overflow: scroll;
-    color: rgb(68, 68, 68);
     font-weight: 500;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(110, 110, 110);
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(110, 110, 110); */
     
 }
 
-header {
+#postHeader {
     padding: 0px 10px 0px 25px;
     max-width: 800px;
     margin-left: auto;

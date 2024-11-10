@@ -15,11 +15,72 @@
         <i id="themeToggle" class="material-icons" onclick="toggleTheme()">&#xe1ae;</i>
     </header>
     <div class="mainContainer">
-      <div class="flipScrollBar">
-        <iframe id="contentScreen" src="contents.html"></iframe>
-      </div>
+        <div id="contentScreen">
+          <header class="headerContainer">
+            <a id="contentHeader">Contents</a>
+            <a id="sideBarBtn" onclick="openCloseBar()">&#171;</a>
+          </header>
+      
+          <table id="myContent" style="align-content: left;">
+              <tr>
+                <td>
+                  <a id="contentItem" href='home.html' target="main">Home</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a id="contentItem" href='./posts/exposureToConflict.html' target="main">Exposure to Conflict</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="category" onclick="closeCategory('health')" target="main">
+                    &#128193; Health
+                  </div>
+
+                  <div id="health" class="categoryContainer">
+                    <a id="categoryItem" href='./posts/health/inflammation.html' target="main">Easing Inflammation</a>
+                  </div>
+
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+      
+                  <div class="category" onclick="closeCategory('hacking')" target="main">
+                    &#128193; Hacking
+                  </div>
+
+                  <div id="hacking" class="categoryContainer">
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                      <a id="categoryItem" href="./posts/testPost2.html" target="main"> Item 2 </a>
+                       
+                  </div>
+      
+                </td>
+              </tr>
+            </table>
+        </div>
+
       <iframe id="postScreen" scrolling="yes" src="home.html" name="main"></iframe>
     </div>
+
     <script src="scripts.js">
     </script>
   </body>

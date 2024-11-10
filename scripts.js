@@ -1,13 +1,34 @@
 const header = document.getElementById('indexBody');
 const contentBody = document.getElementById('contentScreen');
-const postBody = document.getElementById('postScreen');
-const textDarkTheme = 'rgb(163, 119, 37)'
+const textDarkTheme = 'rgb(200, 200, 200)'
+const textLightTheme = 'rgb(20, 20, 20)'
 const backDarkTheme = 'rgb(20, 20, 20)';
 const backLightTheme = 'rgb(255, 255, 255)';
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+function toggleTheme() {
+    if(!localStorage.getItem('dark')) {
+        document.body.classList.add("dark_mode")
+        localStorage.removeItem('light');
+        localStorage.setItem('dark',this.checked)
+    } else {
+        document.body.classList.remove('dark_mode') 
+        localStorage.removeItem('dark');
+        localStorage.setItem('light',this.checked);  
+    }
+    window.location.reload();
 }
+
+if(localStorage.getItem('dark')) {
+    header.style.color = textDarkTheme;
+    contentBody.style.color = textDarkTheme;
+    header.style.backgroundColor = backDarkTheme;
+    contentBody.style.backgroundColor = backDarkTheme;
+  } else {
+    header.style.color = textLightTheme;
+    contentBody.style.color = textLightTheme;
+    header.style.backgroundColor = backLightTheme;
+    contentBody.style.backgroundColor = backLightTheme; 
+  }
 
 function openCloseBar() {
     let screen = parent.document.getElementById('contentScreen');
@@ -16,12 +37,12 @@ function openCloseBar() {
         showContent(false, screen);
         btn.innerHTML = "&#8250;"
         btn.style.paddingRight = "0px";
-        document.getElementById('contentBody').style.overflow = "hidden";
+        screen.style.overflow = "hidden";
     } else {
         showContent(true, screen);
         btn.innerHTML = "&#171;";
         btn.style.paddingRight = "8px";
-        document.getElementById('contentBody').style.overflow = "auto";
+        screen.style.overflow = "auto";
     }
 }
 
@@ -33,12 +54,14 @@ function showContent(boolean, scrn) {
         myContent.style.opacity = "1";
         scrn.style.width = "200px";
         scrn.style.minWidth = "200px";
+        scrn.style.height = "100%";
         myContent.style.pointerEvents = "auto";
     } else {
         contentHeader.style.opacity = "0";
         myContent.style.opacity = "0";
         scrn.style.minWidth = "0px";
         scrn.style.width = "15px";
+        scrn.style.height = "45px";
         myContent.style.pointerEvents = "none";
         
     }
@@ -49,9 +72,11 @@ function closeCategory(elementName) {
     if (category.style.visibility != "visible") {
         category.style.visibility = "visible";
         category.style.height = "auto";
+        category.style.display = "grid";
     } else {
         category.style.visibility = "collapse";
         category.style.height = "0px";
+        category.style.display = "none";
     }
 }
 
@@ -59,17 +84,3 @@ function goToHome() {
     document.getElementById('postScreen').src = "home.html";
   }
 
-
-function toggleTheme() {
-    if (!header.style.backgroundColor || header.style.backgroundColor == 'rgb(255, 255, 255)') {
-        document.getElementById("indexHeader").style.outlineColor = 'rgb(45, 45, 45)';
-        header.style.backgroundColor = backDarkTheme;
-        postBody.style.backgroundColor = backDarkTheme;
-        contentBody.style.backgroundColor = backDarkTheme;
-    } else {
-        document.getElementById("indexHeader").style.outlineColor = 'rgb(0, 0, 0)';
-        header.style.backgroundColor = backLightTheme;
-        postBody.style.backgroundColor = backLightTheme;
-        contentBody.style.backgroundColor = backLightTheme;
-    }
-}
