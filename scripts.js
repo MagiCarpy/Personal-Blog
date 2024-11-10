@@ -61,7 +61,6 @@ function showContent(boolean, scrn) {
         myContent.style.opacity = "0";
         scrn.style.minWidth = "0px";
         scrn.style.width = "15px";
-        scrn.style.height = "45px";
         myContent.style.pointerEvents = "none";
         
     }
