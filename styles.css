@@ -183,21 +183,23 @@
     
 }
 
+img {
+    padding-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 500px;
+  }
+code {
+    border: black solid 1px;
+}
+pre {
+    min-width: 500px;
+    padding-right: 5px;
+    margin: 0px;
+}
+
 footer {
     width: 100%;
     height: 100px;
 }
-/* USE WHEN ADDING IMAGES */
-/* 
-.imgContainer {
-    overflow: auto;
-    width: 90vw;
-    height: 90vh;
-    background-color: rgb(0, 0, 0);
-    position: relative;
-}
-
-.imgContainer > img {
-    height: 500px; 
-    width: 800px; 
-} */
