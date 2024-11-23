@@ -6,6 +6,7 @@
 
 /* Index Page */
 #indexBody {
+    
     overflow: hidden;
     position: fixed; 
     top: 0; 
@@ -110,19 +111,20 @@
 }
 
 #myContent {
+    text-decoration: none;
     opacity: 0;
     padding: 0px 5px 50px 10px;
-    text-decoration: none;
     font-size: 16px;
 }
 
 #contentItem {
+    color: inherit;
     text-decoration: none; /* Removes the underline */
 }
 
 #sideBarBtn:hover, #headerTitle:hover, #themeToggle:hover,
 #contentItem:hover, #categoryItem:hover, .category:hover{
-    color: rgb(192, 192, 192);
+    color: rgba(124, 124, 124, 0.507);
     cursor: pointer;
 }
 
@@ -140,9 +142,10 @@
 } 
 
 #categoryItem {
+    color: inherit;
     padding-left: 15px;
     padding-top: 5px;
-    text-decoration: none;
+    text-decoration: auto;
 }
 
 /* POST STYLES */
@@ -188,14 +191,11 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    min-width: 500px;
   }
 code {
     border: black solid 1px;
 }
 pre {
-    min-width: 500px;
-    padding-right: 5px;
     margin: 0px;
 }
 
